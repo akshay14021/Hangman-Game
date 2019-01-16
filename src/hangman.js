@@ -27,7 +27,7 @@ class Hangman {
         })
 
         if (!this.guessedLetters.includes(guess) && letterFound !== undefined) {
-            this.guessedLetters.push(guess)
+            this.guessedLetters = [...this.guessedLetters, guess]
         } else if (!this.guessedLetters.includes(guess) && letterFound === undefined) {
             this.remainingGuesses--
         }
